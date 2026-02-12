@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AuthorRepository extends JpaRepository<Author, Long> {
     @Query("select a from Author a left join fetch a.books")
-    List<Author> findAllWithBooks();
+    List<Author> findAllWithFetchJoin();
 }
